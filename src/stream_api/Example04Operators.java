@@ -1,14 +1,18 @@
 package stream_api;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 public class Example04Operators {
 
     public static void main(String[] args) {
-//        createStream();
-//        createIterateStream();
+        createStream();
+        createIterateStream();
         concatStream();
+        builderStream();
+        rangeStream();
     }
 
     private static void createStream() {
@@ -60,5 +64,45 @@ public class Example04Operators {
                 Stream.of(1, 2, 3),
                 Stream.of(4, 5, 6)
         ).forEach(System.out::println);
+    }
+
+    private static void builderStream() {
+        // build()
+        // Создаёт мутабельный объект для добавления элементов в стрим
+        // без использования какого-либо контейнера для этого.
+
+        Stream.Builder<Integer> streamBuilder = Stream.<Integer>builder()
+                .add(0)
+                .add(1);
+
+        for (int i = 2; i < 8; i += 2) {
+            streamBuilder.accept(i);
+        }
+
+        streamBuilder
+                .add(9)
+                .add(10)
+                .build()
+                .forEach(System.out::println);
+    }
+
+    private static void rangeStream() {
+        IntStream.range(0, 10)
+                .forEach(System.out::println);
+
+        System.out.println("-----");
+
+        LongStream.range(-10L, -3L)
+                .forEach(System.out::println);
+
+        System.out.println("-----");
+
+        IntStream.rangeClosed(5, 11)
+                .forEach(System.out::println);
+
+        System.out.println("-----");
+
+        LongStream.rangeClosed(-6L, -3L)
+                .forEach(System.out::println);
     }
 }
