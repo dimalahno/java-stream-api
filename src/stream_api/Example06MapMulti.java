@@ -7,6 +7,10 @@ import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 public class Example06MapMulti {
+    // У mapMulti есть несколько преимуществ перед flatMap.
+    // Во-первых, если приходится пропускать значения, то не будет затрат на создание пустого стрима.
+    // Во-вторых, consumer легко передать в другой метод,
+    // в котором можно проводить преобразования, включая рекурсивные.
 
     public static void main(String[] args) {
         Example06MapMulti example06 = new Example06MapMulti();
