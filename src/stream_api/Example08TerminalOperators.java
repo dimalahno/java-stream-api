@@ -9,14 +9,14 @@ import java.util.stream.Stream;
 public class Example08TerminalOperators {
 
     public static void main(String[] args) {
-//        forEachStream();
-//        forEachOrderedStream();
-//        countStream();
-//        collectStream();
-//        streamToArray();
-//        streamToList();
-//        reduceStream();
-//        matchPredicate();
+        forEachStream();
+        forEachOrderedStream();
+        countStream();
+        collectStream();
+        streamToArray();
+        streamToList();
+        reduceStream();
+        matchPredicate();
         averageStream();
     }
 

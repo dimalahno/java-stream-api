@@ -46,6 +46,7 @@ public class Example07DiffOperator {
     }
 
     private static void distinctStream() {
+        // Убирает повторяющиеся элементы и возвращаем стрим с уникальными элементами.
         System.out.println("\n---distinct---");
 
         srcList.stream()

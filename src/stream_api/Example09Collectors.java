@@ -8,17 +8,17 @@ import java.util.stream.Stream;
 
 public class Example09Collectors {
     public static void main(String[] args) {
-//        streamToList();
-//        streamToSet();
-//        streamToMap();
-//        streamToMap2();
-//        streamCollectingAndThen();
-//        streamJoining();
-//        streamSumAndAvg();
-//        countStreamElements();
-//        diffMethodCollectors();
-//        findMinMaxBy();
-//        groupByStream();
+        streamToList();
+        streamToSet();
+        streamToMap();
+        streamToMap2();
+        streamCollectingAndThen();
+        streamJoining();
+        streamSumAndAvg();
+        countStreamElements();
+        diffMethodCollectors();
+        findMinMaxBy();
+        groupByStream();
         partitioningBy();
     }
 
