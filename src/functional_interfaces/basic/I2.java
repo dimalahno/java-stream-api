@@ -8,6 +8,6 @@ public interface I2 {
     }
 
     default String method2(String x) {
-        return "default method2 " + s + x;
+        return "default method2 " + s + " for " + x;
     }
 }

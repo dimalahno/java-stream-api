@@ -4,6 +4,6 @@ public class C2 implements I2{
 
     @Override
     public String method2(String x) {
-        return "C2 : " + x;
+        return "C2(method2.def) : " + x;
     }
 }
